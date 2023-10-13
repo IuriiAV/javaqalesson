@@ -3,16 +3,17 @@ package com.qatelran.org.lessonone;
 public class PartyApp {
 
     public static void main(String[] args) {
-        Man man = new Man();
+        Person man = new Man();
         man.setName("Alex");
+        //man.printHello();
 
-        Woman woman = new Woman();
+        Person woman = new Woman();
         woman.setName("Elena");
 
-        Child child = new Child();
+        Person child = new Child();
         child.setName("Max");
 
-        Junior junior = new Junior();
+        Person junior = new Junior();
         junior.setName("Petr");
 
         Person[] people = {man, woman, child, junior};
@@ -20,6 +21,7 @@ public class PartyApp {
         for (int i = 0; i < people.length; i++) {
             Person person = people[i];
             person.printGreetings();
+
         }
 
 
