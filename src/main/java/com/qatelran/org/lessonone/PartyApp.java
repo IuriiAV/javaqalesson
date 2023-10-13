@@ -1,0 +1,31 @@
+package com.qatelran.org.lessonone;
+
+public class PartyApp {
+
+    public static void main(String[] args) {
+        Man man = new Man();
+        man.setName("Alex");
+
+        Woman woman = new Woman();
+        woman.setName("Elena");
+
+        Child child = new Child();
+        child.setName("Max");
+
+        Junior junior = new Junior();
+        junior.setName("Petr");
+
+        Person[] people = {man, woman, child, junior};
+
+        for (int i = 0; i < people.length; i++) {
+            Person person = people[i];
+            person.printGreetings();
+        }
+
+
+//        //Example
+//        for(Person person : people) {
+//            person.printGreetings();
+//        }
+    }
+}
