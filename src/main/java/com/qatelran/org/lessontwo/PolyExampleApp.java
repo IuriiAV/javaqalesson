@@ -4,8 +4,7 @@ package com.qatelran.org.lessontwo;
 public class PolyExampleApp {
 
     public static void main(String[] args) {
-        //Overloading
-
+        //Overloading , static polymorphism,
         int a = 5;
         int b = 10;
         int c = 4;
