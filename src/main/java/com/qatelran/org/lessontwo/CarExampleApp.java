@@ -9,12 +9,12 @@ public class CarExampleApp {
         bigCar.setName("Tatra");
         smallCar.setName("Opel");
 
-       // bigCar.tank();
-       // smallCar.tank();
+        // bigCar.tank();
+        // smallCar.tank();
 
         Bus bus = new Bus();
         bus.setName("Autobus");
-      //  bus.tank();
+        //  bus.tank();
 
 
         /*
@@ -25,15 +25,24 @@ public class CarExampleApp {
           Bus
          */
 
+        LittleCar littleCar = new LittleCar();
+        littleCar.setName("Little");
+
         fillCar(bigCar);
         fillCar(smallCar);
         fillCar(bus);
+        fillCar(littleCar);
+
+        Car[] cars = {bigCar,smallCar,bus,littleCar};
+        for(int i = 0; i < cars.length; i++) {
+            Car car = cars[i];
+            car.tank();
+        }
     }
 
     private static void fillCar(Car auto) {
         System.out.println("Now I will fill car ");
         auto.tank();
-
     }
 
 //    private static void fillCar(BigCar auto) {
