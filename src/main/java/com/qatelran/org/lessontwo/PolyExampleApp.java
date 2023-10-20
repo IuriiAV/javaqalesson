@@ -1,5 +1,6 @@
 package com.qatelran.org.lessontwo;
 
+//Example app with poly
 public class PolyExampleApp {
 
     public static void main(String[] args) {
