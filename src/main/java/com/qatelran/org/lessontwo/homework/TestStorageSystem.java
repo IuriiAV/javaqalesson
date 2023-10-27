@@ -30,35 +30,51 @@ package com.qatelran.org.lessontwo.homework;
  */
 
 
+import java.util.Scanner;
+
 //Пример структуры основного класса программы
 public class TestStorageSystem {
 
     public static void main(String[] args) {
         //Ввод с консоли имен продуктов и создание объектов различных типов
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input tech product name :");
+        String techname = scanner.next();
+        TechProduct techProduct = new TechProduct();
+        techProduct.setName(techname);
 
-        //Создание объекта Truck
+        System.out.println("Input food product name :");
+        String foodname = scanner.next();
+        FoodProduct foodProduct = new FoodProduct();
+        foodProduct.setName(foodname);
 
-        //Вызов loadTruck(truck, products) для загрузки трака
+        System.out.println("Input book product name :");
+        String bookname = scanner.next();
+        BookProduct bookProduct = new BookProduct(bookname);
 
-        //Вызовите метод вывода в консоль всех товаров в траке - теперь их 0, это может быть
-        //отдельный метод здесь в который передается склад, или же метод внутри класса Storage
-        //это на ваш выбор
+        Truck truck = new Truck();
+        truck.loadProductToTruck(techProduct);
+        truck.loadProductToTruck(foodProduct);
+        truck.loadProductToTruck(bookProduct);
+
+        System.out.println("All products in truck : ");
+        truck.printAllProductsFromTruck();
 
         System.out.println("Track is loaded and ready to go");
 
-        //Создание объекта склад(), в который будет произведена разгрузка трака
+        Storage storage = new Storage();
 
         //Разгрузите трак в созданный storage
+        for (int i = 0; i < 5; i++) {
+            Product product = truck.unloadProductFromTruck();
+            if (product == null) {
+                break;
+            }
+            storage.loadProductToStorage(product);
+        }
 
-        //Вызовите метод вывода в консоль всех товаров в траке - теперь их 0, это может быть
-        //отдельный метод здесь в который передается склад, или же метод внутри класса Storage
-        //это на ваш выбор
-
-        //Вызовите метод вывода в консоль всех товаров на складе, это может быть
-        //отдельный метод здесь в который передается склад, или же метод внутри класса Storage
-        //это на ваш выбор
-
-        //Программа завершена
+        System.out.println("All product in storage :");
+        storage.printAllProductsFromStorage();
     }
 
     private static void loadTruck(Truck truck, Product[] products) {

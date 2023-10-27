@@ -1,5 +1,23 @@
 package com.qatelran.org.lessontwo.homework;
 
 public class Product {
-    // Класс содержит переменную с наименованием продукта, методами для доступа к ней
+
+    private String name;
+
+    public Product() {
+
+    }
+
+    public Product(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
