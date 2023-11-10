@@ -33,10 +33,10 @@ public class TestRemoveByIterator {
 
         Iterator<String> iterator = stringList.iterator();
         while (iterator.hasNext()) {
-              String element = iterator.next();
-              if("B".equals(element)) {
-                  iterator.remove();
-              }
+            String element = iterator.next();
+            if ("B".equals(element)) {
+                iterator.remove();
+            }
         }
 
         System.out.println(stringList);
