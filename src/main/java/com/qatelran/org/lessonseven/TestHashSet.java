@@ -1,9 +1,6 @@
 package com.qatelran.org.lessonseven;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TestHashSet {
@@ -52,6 +49,13 @@ public class TestHashSet {
 
         System.out.println("Option five " + convertArrayToSetFive(ints));
 
+        //isEmpty(), clear(), iterator(), size()
+        Set<Integer> integerSet = convertArrayToSetFour(ints);
+        //iterator
+        Iterator<Integer> iterator = integerSet.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 
     private static Set<Integer> convertArrayToSetFive(Integer[] array) {
