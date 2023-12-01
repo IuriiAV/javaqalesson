@@ -14,7 +14,17 @@ public class EqualsObjectTest {
         }
 
         if (catOne.equals(catTwo)) {
-            System.out.println("Thea are equals with equals method");
+            System.out.println("They are equals with equals method");
+        }
+
+        if(catOne.equals(catOne)) {
+            System.out.println("" +
+                    "self equals with equals method");
+        }
+
+        Cat catThree = new Cat(19, "Marsik");
+        if(catOne.equals(catThree)) {
+            System.out.println("Hurra ! They are equals");
         }
     }
 }

@@ -29,7 +29,21 @@ public class Cat {
 
     @Override
     public boolean equals(Object obj) {
-        return true;
+        //1
+        if (this == obj) {
+            return true;
+        }
+        //2
+        if(obj == null) {
+            return false;
+        }
+        //3
+        if(!(obj instanceof Cat)){
+            return false;
+        }
+        //4
+        Cat cat = (Cat) obj;
+        return (this.name.equals(cat.name) && this.age == cat.age);
     }
 
     @Override
