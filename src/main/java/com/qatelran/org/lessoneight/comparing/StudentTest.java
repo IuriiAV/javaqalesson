@@ -1,9 +1,6 @@
 package com.qatelran.org.lessoneight.comparing;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class StudentTest {
 
@@ -27,5 +24,32 @@ public class StudentTest {
         while (iteratorTwo.hasNext()) {
             System.out.println(iteratorTwo.next());
         }
+        System.out.println();
+
+        Collections.sort(students, new CustomRateComparator());
+        Iterator<Student> iteratorThree = students.iterator();
+        while (iteratorThree.hasNext()) {
+            System.out.println(iteratorThree.next());
+        }
+        System.out.println();
+
+        Collections.sort(students, new CustomNameComparator());
+        Iterator<Student> iteratorFour = students.iterator();
+        while (iteratorFour.hasNext()) {
+            System.out.println(iteratorFour.next());
+        }
+
+        System.out.println();
+
+        Set<Student> treeSet = new TreeSet<>(new CustomRateComparator());
+        treeSet.add(new Student("Oleg", 20, 5));
+        treeSet.add(new Student("Alex", 25, 3));
+        treeSet.add(new Student("Petr", 17, 2));
+
+        System.out.println(treeSet);
+
+        //Collections.sort(students,(Comparator.comparingInt(Student::getAge)));
+        //Collections.sort(students,Comparator.comparing(Student::getName));
+
     }
 }
