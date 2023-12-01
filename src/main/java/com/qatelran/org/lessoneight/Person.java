@@ -6,4 +6,8 @@ public class Person {
 
     private Address address;
 
+    public Person(int year, Address address) {
+        this.year = year;
+        this.address = address;
+    }
 }
