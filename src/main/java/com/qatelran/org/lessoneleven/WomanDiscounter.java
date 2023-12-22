@@ -4,6 +4,6 @@ public class WomanDiscounter implements Discounter {
 
     @Override
     public void discount(int discount) {
-          // find all woman goods and apply discount
+        System.out.println("Woman discount = " + discount);
     }
 }

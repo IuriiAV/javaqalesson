@@ -7,6 +7,7 @@ public class DiscounterApp {
     public static void main(String[] args) {
 
         int day;
+        System.out.println("Input special day : ");
         Scanner scanner = new Scanner(System.in);
         day = scanner.nextInt();
 
@@ -19,6 +20,8 @@ public class DiscounterApp {
         if (day == 15) {
             applyDiscount(new KidsDiscounter(), 60);
         }
+
+        scanner.close();
     }
 
     private static void applyDiscount(Discounter discounter, int discountSize) {
