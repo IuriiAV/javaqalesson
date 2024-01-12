@@ -5,6 +5,8 @@ public class SearchEngine {
 
     public static void main(String[] args) {
 
+        //Сделать это дома
+
         Product jeans = new Product("Jeans");
         jeans.setType("Model");
         jeans.setColor("White");
