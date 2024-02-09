@@ -24,5 +24,9 @@ public class TestApp {
         Integer paramTwo = testSix.getParamTwo();
         //String upperTwo = ((String) paramTwo).toUpperCase(); - incorrect!!!!
 
+        Test testSeven = new Test("rrr",55);
+        Object paramOne1 = testSeven.getParamOne();
+
+
     }
 }
